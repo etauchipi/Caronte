@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.9.10.12:3027/wsCaronte/wsCaronte.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/wsCaronte" />
+  <xs:element name="get_pacientes_data">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="get_pacientes_dataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="get_pacientes_dataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="get_eps_data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codEps" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="get_eps_dataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="get_eps_dataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="set_paciente_enviado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="s_epside" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_epstid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="set_paciente_enviadoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="set_paciente_administradora">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="s_epside" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_epstid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_epseps" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_epsnep" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_epsmai" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="set_paciente_administradoraResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mensaje_enviar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/wsCaronte" minOccurs="0" name="mensaje_in" nillable="true" type="q1:dtSMTPMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mensaje_enviarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mensaje_enviarResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
